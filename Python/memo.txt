@@ -1,0 +1,16 @@
+標準入力
+・var = input() で取得
+・取得するのは文字列
+・一回の取得で一行まで
+・複数行取得したいときはforする
+・input()で複数行読むときは一回呼び出す毎に1行進む
+
+改行ごとの分割 text.splitlines()
+
+スペース/タブ/改行での分割 text.split()
+
+配列処理
+・配列要素の合計 sum(array)
+・配列要素それぞれに処理を施す array2 = [fucntion(i) for i array]
+
+
