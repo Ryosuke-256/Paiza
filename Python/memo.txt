@@ -13,4 +13,44 @@
 ・配列要素の合計 sum(array)
 ・配列要素それぞれに処理を施す array2 = [fucntion(i) for i array]
 
+numpyは配列をmatlabのように扱える
+[:,idx]などができる
 
+np.zeros((row,col),dtype = int)
+np.full((row,col),10)
+
+配列から最小要素のindexを抜くには
+・numpy
+np.argmin(array)
+
+行列から最小要素のindedを抜く
+最小値を求める np.min(array)
+argwhere
+
+配列内の要素の種類を数える
+・List
+collections.Counter が便利
+my_list = ['a', 'b', 'b', 'c', 'a', 'a']
+count_dict = Counter(my_list)
+print(count_dict)  # 出力: Counter({'a': 3, 'b': 2, 'c': 1})
+・numpy
+my_array = np.array(['a', 'b', 'b', 'c', 'a', 'a'])
+unique_elements, counts = np.unique(my_array, return_counts=True)
+print(unique_elements)  # 出力: ['a' 'b' 'c']
+print(counts)  # 出力: [3 2 1]
+
+配列の一致を見る
+順序を無視: set(list1) == set(list2)
+順序を考慮: list1 == list2
+重複も考慮: Counter(list1) == Counter(list2)
+from collections import Counter
+
+整数行列内から指定した数字を探しそのindexを答える
+indices = np.argwhere(matrix == target)
+
+対角成分を得る
+main_diag = np.diag(matrix)
+anti_diag = np.diag(np.fliply(matrix))
+
+全ての要素が0かどうかの確認
+np.all(matrix == 0)
