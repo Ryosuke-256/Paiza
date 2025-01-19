@@ -54,3 +54,8 @@ anti_diag = np.diag(np.fliply(matrix))
 
 全ての要素が0かどうかの確認
 np.all(matrix == 0)
+
+配列のサイズ
+np.size
+形
+np.shape
