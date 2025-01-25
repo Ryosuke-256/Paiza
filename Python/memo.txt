@@ -152,5 +152,5 @@ s2.issuperset(s1) # True
 ・互いに素か判定 : isdisjoint()
 s1.isdisjoint(s2) # False
 
-
+N, Q = map(int, input().split())
 
