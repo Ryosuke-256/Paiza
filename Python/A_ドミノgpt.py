@@ -6,6 +6,7 @@ sys.setrecursionlimit(10**6)
 def max_score(h, w, scores):
     directions = [(-1, 0), (-1, -1), (-1, 1)]  # 上、左上、右上
 
+    #最後の列からスタートしてどんどん上に上がっていくdfs
     @lru_cache(None)
     def dfs(x, y):
         if x == 0:  # 最上段に到達
@@ -19,17 +20,18 @@ def max_score(h, w, scores):
 
         return scores[x][y] + max_points
 
+    #各列に対して行う
     max_result = 0
     for start_col in range(w):
         max_result = max(max_result, dfs(h - 1, start_col))
 
     return max_result
 
-if __name__ == "__main__":
-    input = sys.stdin.read
-    data = input().splitlines()
 
-    h, w = map(int, data[0].split())
-    scores = [list(map(int, line.split())) for line in data[1:]]
+input = sys.stdin.read
+data = input().splitlines()
 
-    print(max_score(h, w, scores))
+h, w = map(int, data[0].split())
+scores = [list(map(int, line.split())) for line in data[1:]]
+
+print(max_score(h, w, scores))

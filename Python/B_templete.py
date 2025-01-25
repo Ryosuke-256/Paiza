@@ -7,3 +7,11 @@ for i in range(row):
 
 
 
+import sys
+input = sys.stdin.read
+data = input().splitlines()
+row_num, col_num = map(int, data[0].split())
+table = [list(map(int, line.split())) for line in data[1:]]
+
+
+
