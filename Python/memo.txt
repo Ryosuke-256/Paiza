@@ -39,10 +39,14 @@ unique_elements, counts = np.unique(my_array, return_counts=True)
 print(unique_elements)  # 出力: ['a' 'b' 'c']
 print(counts)  # 出力: [3 2 1]
 
+・配列内の特定の要素を数える
+np.count_nonzero(array == target)
+
+
 配列の一致を見る
 順序を無視: set(list1) == set(list2)
 順序を考慮: list1 == list2
-重複も考慮: Counter(list1) == Counter(list2)
+順序を無視するが重複は考慮: Counter(list1) == Counter(list2)
 from collections import Counter
 
 整数行列内から指定した数字を探しそのindexを答える
@@ -153,4 +157,10 @@ s2.issuperset(s1) # True
 s1.isdisjoint(s2) # False
 
 N, Q = map(int, input().split())
+
+文字列置き換え
+str.replace('before','after')
+
+
+
 

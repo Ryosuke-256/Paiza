@@ -6,7 +6,7 @@ for i in range(row):
     table[i] = onerow
 
 
-
+import numpy as np
 import sys
 input = sys.stdin.read
 data = input().splitlines()
