@@ -49,7 +49,7 @@ np.count_nonzero(array == target)
 順序を無視するが重複は考慮: Counter(list1) == Counter(list2)
 from collections import Counter
 
-整数行列内から指定した数字を探しそのindexを答える
+行列内から指定した要素を探しそのindexを答える
 indices = np.argwhere(matrix == target)
 
 対角成分を得る
@@ -161,6 +161,30 @@ N, Q = map(int, input().split())
 文字列置き換え
 str.replace('before','after')
 
+合計
+arr = np.array([
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10],
+    [11, 12, 13, 14, 15],
+    [16, 17, 18, 19, 20],
+    [21, 22, 23, 24, 25]
+])
+# 3列目（index=2）、2〜5行目（index=1〜4）の合計をとる
+result = np.sum(arr[1:5, 2])
 
+
+・list(iterable)
+iterableオブジェクトをリストに変換する
+ex
+s = "hello"
+lst = list(s)
+print(lst)  # ['h', 'e', 'l', 'l', 'o']
+
+・zip(iterable,iterable)
+iterableをまとめて同時にループ処理できる
+a = [1, 2, 3]
+b = ['a', 'b', 'c']
+zipped = zip(a, b)
+print(list(zipped))  # [(1, 'a'), (2, 'b'), (3, 'c')]
 
 
